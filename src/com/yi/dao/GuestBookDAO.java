@@ -95,4 +95,17 @@ public class GuestBookDAO {
 			JDBCUtil.close(pstmt);
 		}
 	}	
+	
+	public int delete(Connection conn, int id) throws SQLException {
+		PreparedStatement pstmt = null;
+		
+		try {
+			String sql = "delete from guestbook where id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, id);
+			return pstmt.executeUpdate();
+		} finally {
+			JDBCUtil.close(pstmt);
+		}
+	}
 }

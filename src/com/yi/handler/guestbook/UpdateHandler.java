@@ -23,7 +23,7 @@ public class UpdateHandler implements CommandHandler {
 			try {
 				conn = JDBCUtil.getConnection();
 				GuestBookDAO dao = GuestBookDAO.getInstance();
-				GuestBook gb = dao.selectById(conn, id); //임시코드로 1만 가져옴
+				GuestBook gb = dao.selectById(conn, id); 
 				req.setAttribute("gb", gb);
 				return "/WEB-INF/view/guestbook/gbUpdateForm.jsp";
 			}catch (Exception e) {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>MVCProject</display-name>
+  
   <servlet> <!-- DBCP 자동 실행(커넥션 풀) -->
   	<servlet-name>DBCPInit</servlet-name>
   	<servlet-class>com.yi.jdbc.DBCPInit</servlet-class>

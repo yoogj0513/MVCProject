@@ -23,7 +23,11 @@
 			//var id = $(this).parent().prev().prev().prev().html();
 			var id = $(this).attr("data-id");
 			location.href = "update.do?id="+id;
-			
+		})
+		
+		$('.btnDel').click(function(){
+			var id = $(this).attr("data-id");
+			location.href = "delete.do?id="+id;
 		})
 	})
 </script>
@@ -46,9 +50,8 @@
 				<td>${gb.message }</td>
 				<td>
 					<button class="btnMod" data-id="${gb.id }">수정</button>
-					<button class="btnDel">삭제</button>
+					<button class="btnDel" data-id="${gb.id }">삭제</button>
 				</td>
-				
 			</tr>
 		</c:forEach>
 	</table>
